@@ -5,6 +5,8 @@
 // Node: npm start
 // Dev: npm run dev
 
+// Concurrently Initialize: npm run develop
+
 // Imports required Node.js Modules
 const express = require("express");
 const path = require("path");
@@ -20,7 +22,7 @@ const db = require("./config/connect.js");
 const { typeDefs, resolvers } = require("./schemas");
 
 // Import Authentication Middleware, JSON Web Token (JWT)
-const { authMiddleware } = require("./utils/authorize.js");
+const { authMiddleware } = require("./utils/auth.js");
 
 const server = new ApolloServer({
   typeDefs,
