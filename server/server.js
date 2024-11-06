@@ -7,6 +7,15 @@
 
 // Concurrently Initialize: npm run develop
 
+// Test Accounts
+// User Name: Kyle
+// Email: kyle.a.chen@icloud.com
+// Pasword: password
+
+// User Name: sample
+// Email: sample@email.com
+// Pasword:password
+
 // Imports required Node.js Modules
 const express = require("express");
 const path = require("path");
@@ -86,9 +95,9 @@ startApolloServer();
 
 app.listen(PORT, () => {
   console.log(
-    `server.js Line 87: Book Search Engine App Express Server (Backend) is listing on Port ${PORT}.`
+    `server.js Line 93: Book Search Engine App Express Server (Backend) is listing on Port ${PORT}.`
   );
   console.log(
-    `server.js Line 90: GraphQL is available at http://localhost:${PORT}/graphql`
+    `server.js Line 96: GraphQL is available at http://localhost:${PORT}/graphql`
   );
 });

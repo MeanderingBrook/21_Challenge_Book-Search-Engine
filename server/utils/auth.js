@@ -50,17 +50,21 @@
 //   },
 // };
 
+// Imports required Node.js Modules
 const jwt = require("jsonwebtoken");
 const { GraphQLError } = require("graphql");
-const secret = "mysecretsshhhhh";
+
+// Imports required App Modules
+const secret = process.env.JWT_SECRET;
 const expiration = "2h";
 
 module.exports = {
-  AuthenticationError: new GraphQLError("Could not authenticate user.", {
+  AuthenticationError: new GraphQLError("User could not be authenticated.", {
     extensions: {
       code: "UNAUTHENTICATED",
     },
   }),
+
   authMiddleware: function ({ req }) {
     // allows token to be sent via req.body, req.query, or headers
     let token = req.body.token || req.query.token || req.headers.authorization;
@@ -83,6 +87,7 @@ module.exports = {
 
     return req;
   },
+
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
 
