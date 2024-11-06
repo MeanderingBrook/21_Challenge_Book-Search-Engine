@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
 // import { LOGIN } from '../utils/queries'
-import { LOGIN_USER } from '../utils/mutations'
+// import { LOGIN_USER } from '../utils/mutations' !!!
+import { LOGIN_USER } from '../utils/queries'
 import { useMutation } from '@apollo/client';
 
 // import { loginUser } from '../utils/API';
@@ -34,7 +35,7 @@ const LoginForm = () => {
 
     try {
       // const response = await loginUser(userFormData);
-      const { data } = await existingUser({
+      const { data } = await login({
         variables: { ...userFormData },
       })
 
@@ -45,7 +46,7 @@ const LoginForm = () => {
       // const { token, user } = await response.json();
       // console.log(user);
       // Auth.login(token);
-      Auth.login(data.existingUser.token)
+      Auth.login(data.login.token)
     } catch (err) {
       console.error(err);
       setShowAlert(true);
