@@ -1,54 +1,18 @@
-// // Imports required Node.js Modules
-// const { GraphQLError } = require("graphql");
-// const jwt = require("jsonwebtoken");
+// Test Accounts
 
-// // Imports required App Modules
-// const secret = "mysecretsshhhhh";
-// // const jwtSecret = process.env.JWT_SECRET;
-// // const jwtSecret = "userSecret";
-// const expiration = "1h";
+// Local >>
+// User Name: Kyle
+// Email: kyle.a.chen@icloud.com
+// Pasword: password
 
-// module.exports = {
-//   // AuthenticationError: new GraphQLError("User could not be authenticated.", {
-//   //   extensions: {
-//   //     code: "UNAUTHENTICATED",
-//   //   },
-//   // }),
-//   AuthenticationError: new GraphQLError("Could not authenticate user.", {
-//     extensions: {
-//       code: "UNAUTHENTICATED",
-//     },
-//   }),
-//   authMiddleware: function ({ req }) {
-//     // allows token to be sent via req.body, req.query, or headers
-//     let token = req.body.token || req.query.token || req.headers.authorization;
+// User Name: sample
+// Email: sample@email.com
+// Pasword:password
 
-//     // ["Bearer", "<tokenvalue>"]
-//     if (req.headers.authorization) {
-//       token = token.split(" ").pop().trim();
-//     }
-
-//     if (!token) {
-//       return req;
-//     }
-
-//     try {
-//       const { data } = jwt.verify(token, secret, { maxAge: expiration });
-//       req.user = data;
-//     } catch (error) {
-//       console.log(error);
-//       console.log("auth.js Line 33: Invalid token");
-//       // console.log("Invalid token");
-//     }
-
-//     return req;
-//   },
-//   signToken: function ({ username, email, _id }) {
-//     const payload = { username, email, _id };
-
-//     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
-//   },
-// };
+// Render >>
+// User Name: Test User
+// Email: test@email.com
+// Password: password
 
 // Imports required Node.js Modules
 const jwt = require("jsonwebtoken");

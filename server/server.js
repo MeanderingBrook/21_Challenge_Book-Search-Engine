@@ -7,15 +7,6 @@
 
 // Concurrently Initialize: npm run develop
 
-// Test Accounts
-// User Name: Kyle
-// Email: kyle.a.chen@icloud.com
-// Pasword: password
-
-// User Name: sample
-// Email: sample@email.com
-// Pasword:password
-
 // Imports required Node.js Modules
 const express = require("express");
 const path = require("path");
