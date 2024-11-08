@@ -42,9 +42,4 @@ const typeDefs = `
   }
 `;
 
-// !!!
-// type Query {
-//   me: User
-// }
-
 module.exports = typeDefs;
